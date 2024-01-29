@@ -412,6 +412,7 @@ td, th{
 
     .estilos-cabello{
         width: 150px;
+        align-items: center;
     }
 
     .lista-diferenciales, .imagen-diferenciales{
@@ -419,7 +420,7 @@ td, th{
     }
 
     .enviar{
-        width: 60%;
+        width: 100%;
     }
     
     .input-padron{
