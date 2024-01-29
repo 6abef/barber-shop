@@ -1,0 +1,430 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: #BBBBBB ;
+    padding: 20px;
+}
+
+/* Ordenando lista horizontalmente */
+/* ul{
+    display: inline;
+} */
+
+.caja{
+    /* Tamaño usual de pantallas se 1080px!! */
+    width: 940px;
+    position: relative;
+    /* Alineación EXTERNA al elemento 0 inf-sup y automátco izq-der(posiciona a la mitad dentro de los bordes de la width pedida) */
+    margin: 0 auto;
+}
+
+/* Posicionamiento del navegador */
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+/*Navegador de lista (Para html5+) */
+nav li{
+    display: inline;
+}
+
+/* Formato de los botones */
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    /* Desactivar el subrayado de links por default */
+    text-decoration: none;
+    /* Separando botones (der arriba abajo izq) */
+    margin: 0 0 0 15px;
+}
+
+/* Capturar movimiento del Mouse */
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+/* Centrado de la lista de productos */
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    /* Separando de la parte superior */
+    padding: 50px;
+    /* width: auto; */
+}
+
+/* Formato a la lista de productos */
+.productos li{
+    display: inline-block;
+    text-align: center;
+    /* Separando el espacio en tres (para alinear los tres productos)*/
+    width: 30%;
+    vertical-align: top;
+    
+    
+    /* Colocamos color para verificar caracteristicas (longitud y posicionamiento) */
+    /* background: #CCCCCC; */
+    /* Espacio entre elementos de la lista */
+    margin: 0 1.5%;
+    /* Colocación interna de los elementos (!!!! AUMENTA EL TAMAÑO DE LOS ELEMENTOS!!!! */
+    padding: 30px 20px;
+    /* Colocando una caja en cada elemento para no subir los pixeles */
+    box-sizing: border-box;
+
+    /* Agregando borde externo editando cada característica */
+    /* border-color: #000000;
+    border-width: 2px;
+    border-style: solid; */
+
+    /* Agregando borde externo (simplificando a una sola línea) */
+    border: 2px solid #000000;
+    /* Configurando el redondeo de puntas empieza por superior-derecho en sentido horario (o un único radio) */
+    /* Se pueden editar  agregando -top/bottom-left/right- */
+    border-radius: 10px;
+}
+
+/* Color del borde al posicionar mouse sobre cada producto*/
+.productos li:hover{
+    border-color: #c78c19;
+}
+
+/* Color del borde al dar clic sobre cada producto */
+.productos li:active{
+    border-color: #088c19;
+}
+
+
+/* Formato del encabezado de la lista */
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Cambiando tamaño del encabezado (nombre del producto) al dar clic*/
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+/* Formato a la descripción del producto */
+.producto-descripcion{
+    font-size: 18px;
+}
+
+/* Formato al precio del producto */
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    /* Esta función repite la imagen las veces que sea necesarias para que ocupe todo el fondo de la página */
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
+
+/* centralizar elementos del formulario | Se coloca en cada bloque para editar secciones de distintas formas*/
+/* main{
+    width: 940px;
+    margin: 0 auto;
+
+} */
+
+form{
+    /* text-align: center; */
+    margin: 20px 60px;
+}
+/* Ordenar verticalmente los elementos del formulario y aplicar mismo formato a párrafo*/
+form label,form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+/* Asignar mismo estilo a dos elementos distintos (incluirlos separados por una coma) */
+/* TEXTAREA permite seleccionar entradas de texto de más de una fila */
+/* form input, form textarea{ */
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+/* Separamos la checkbox para no confundir con los botones de cntacot */
+.checkbox{
+    margin: 20px 0;
+}
+
+
+/* Formato de la pregunta ¿cómo quiere que lo contactemos? (asignada como párrafo) */
+/* Puede cambiarse desde etiqueta del párrafo */
+/* p{ 
+    color: red;
+} */
+/* Al asignarse desde etiqueta del párrafo del formulario, este tiene una jeraquía mayor por lo que se respeta este elemeto */
+/* form p{
+    color: blue;
+} */
+
+.enviar{
+    width: 40%;
+    padding: 15px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    /* Retrasar el cambio de color por posicionamiento sobre botón (debemos indicar sobre que elementos del hover se aplica) */
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    /* Aumentar 20% tamaño al colocar mouse sobre este*/
+    transform: scale(1.2);
+}
+
+/* Formato de tabla */
+table{
+    margin: 40px 80px;
+
+}
+
+/* formato comentario */
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+/* líneas de la tabla */
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/* ************* CSS para nuestra home **********************/
+
+.banner{
+    width: 100%;
+}
+
+/* Editando solo el hijo directo de main ( padre>hijo ) */
+/* main > p{
+    background: red;
+} */
+
+/* Editando hermanos (elementos del mismo nivel)*/
+/* el primer párrafo después de la imagen */
+/* img + p{
+    background: yellow;
+} */
+
+/* Editando todos los elementos (párrafos) del mismo nivel después de img */
+/* img ~p{
+    background: green;
+} */
+
+/* Editando todos los párrafos de la sección principal salvo uno */
+/* .principal p:not(#mission){
+    background: orange;
+} */
+
+
+/* edición del bloque principal */
+.principal{
+    /* espaciado */
+    padding: 3em;
+    /* color de fondo */
+    background: #FEFEFE;
+    /* Centralizado */
+    margin: 0 auto;
+}
+
+.titulo-principal{
+    text-align: center;
+    /* Tamaño del doble del padrón de la página (fuente default del navegador) */
+    font-size: 2em;
+    margin:0 0 1em;
+    /* la imagen de la barbería  solo aplica para el primer texto (antes de diferenciales) */
+    clear: left;
+    /* Opacidad en títulos
+    color: rgba(218,0,0,3); */
+
+    /* Sombra al texto */
+    /* text-shadow: 2px 2px 10px red; */
+}
+
+/* Usando una pseudoclase para alterar la primera letra del título de cada sección */
+/* .titulo-principal::first-letter{
+    font-weight: bold;
+} */
+
+/* Agregando elementos textuales antes del contenido del título en cada sección */
+/* .titulo-principal:before{
+    content: "[";
+} */
+
+/* Agregando elementos textuales después del contenido del título en cada sección */
+/* .titulo-principal:after{
+    content: "]";
+} */
+
+/* Usando uns pseudoclase para alterar la primera línea de un párrafo */
+/* p::first-line{
+    font-style: italic;
+} */
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight:bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    /* Posicionamiento de imagen (izq) ajustada al texto (der)*/
+    float: left;
+    /* Colocando margen externo para separar imagen-texto sup-der-inf-izq */
+    margin: 0 20px 20px 0;
+}
+
+/* Bloque del mapa */
+.mapa{
+    padding: 3em 0;
+    /* Color de fondo con degradado */
+    /* background: linear-gradient(45deg, orange 50%,blue); */
+    /* background: radial-gradient(orange 50%,blue, red, black); */
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    /* Centralizar mapa */
+    width: 940px;
+    margin: 0 auto;
+}
+
+/* Bloque diferenciales */
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    /* ajuste horizontal */
+    display: inline-block;
+    /* Colocar el texto hasta arriba */
+    vertical-align: top;
+}
+
+.items{
+    /* Espaciar texto */
+    line-height: 1.5;
+}
+
+.items::before{
+    content: "★";
+}
+
+/* Editamos el primer item tiene una pseudo-clase para tener propiedades especiales en alguno de los elementos de una clase  : first-child, last-child o nth-child(2n o #)*/
+.items:first-child{
+    font-weight: bold;
+}
+
+.imagen-diferenciales{
+    width: 60%;
+    transition: 400ms;
+    /* Sombras horizontal, vertical,(difuminación),(expansión), color  */
+    /* !! Pueden agregarse más sombras separando parámetros por una coma */
+    box-shadow: 10px 10px 30px 15px #000000;
+
+    /* Sombra interna */
+    /* box-shadow: inset 0 0 5px black; */
+}
+.imagen-diferenciales:hover{
+    opacity: 0.3;
+}
+
+.video{
+    width: 560px;
+    margin: 1em auto;
+}
+
+
+/* CASO ABRIR EN DISPOSITIVOS MÓVILES (página responsiva) */
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video, .productos{
+        width: auto;
+    }
+
+    /* Formato a la lista de productos */
+    .productos li{
+        display: block;
+        width: auto;   
+        /* Colocamos color para verificar caracteristicas (longitud y posicionamiento) */
+        /* background: #CCCCCC; */
+        /* Espacio entre elementos de la lista */
+        margin: 1.5% 1.5%;    /* Colocación interna de los elementos (!!!! AUMENTA EL TAMAÑO DE LOS ELEMENTOS!!!! */
+        padding: 30px 50px;
+    }
+
+    .estilos-cabello{
+        width: 150px;
+    }
+
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+
+    .enviar{
+        width: 60%;
+    }
+    
+    .input-padron{
+        width: 90%;
+    }
+
+}
+

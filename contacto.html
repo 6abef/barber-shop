@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Adaptarse a la longitud del dispositivo -->
+        <meta name="viewport" content="width=device-width">
+        <title>Contacto - Barbería Alura</title>
+        <!-- Agregando archivo reset.css para que el estilo creado no se vea influenciado por el estilo del navegador -->
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <!-- Usar estilo de fuente externo (Montserrat Light 300) -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="Logo de la Barbería Alura"></h1>
+                <nav>
+                    <ul>
+                        <!-- Lista de enlaces de las páginas relacionadas -->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Etiqueta de formularios -->
+            <form>
+                <!-- Colocar etiqueta relacionada por la id de la caja de texto -->
+                <label for="nombreapellido">Nombre y Apellido</label>
+                <!-- Caja de texto para entrada de datos de usuarios -->
+                
+                <!-- Colocamos los types correspondiente para visualización en celular !!-->
+                <!-- Indicamos campo obligatorio agregando "required" al final -->
+                <input type="text" id="nombreapellido" class="input-padron" required>
+
+                <!-- Colocamos un ejemplo de dato usando un placeholder!! -->
+                <label for="correoelectronico">Correo electronico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+
+                
+                <!-- INPUTS COMPLEJOS -->
+                
+                <!-- Caja de texto dinámica (tamaño) -->
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+
+                <!-- Selección de forma de contacto -->
+                <!-- Usamos fieldset para indicar que son elementos del mismo grupo -->
+                <!-- También funcionaría con div!! -->
+                <fieldset>
+                    <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                    <!-- Boton de seleccion múltiple --> 
+                    <!-- (COLOCAMOS NAME PARA SELECCIONAR ENTRE OPCIONES)  -->
+                    <!-- COLOCAMOS EL BOTON ANTES DE LA ETIQUETA (TEXTO MOSTRADO PARA QUE APAREZCA ANTES DE ESTE) -->
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                   
+                    <label for="radio-telefono"><input type="radio"  name="contacto" value="telfono" id="radio-telefono">Teléfono</label>
+                    <!-- Colocamos "checked" para seleccionarla por defecto -->
+                    <label for="radio-whatsapp"><input type="radio"  name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                    
+                </fieldset>
+
+                
+                <!-- Lista desplegable -->
+                <fieldset>
+                    <legend>¿En cuál horario prefiere ser atendido?</legend>
+                    <select>
+                        <!-- Opciones de la lista -->
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+
+
+                <!-- Check box (Caja seleccionadora de una opción única) -->
+                <!-- Colocamos "checked" para seleccionarla por defecto -->
+                <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
+
+                <!-- Boton de envío de formulario -->
+                <input type="submit" value="Enviar formulario" class="enviar">
+
+            </form>
+
+            <!-- Tabla de horario-->
+            <table>
+                <thead>
+                    <!-- fila 1 (ENCABEZADO) -->
+                    <tr>
+                        <!-- columnas deencabezado -->
+                        <th>Día</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <!-- fila 2 -->
+                    <tr>
+                        <!-- columnas -->
+                        <td>Lunes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <!-- fila 3 -->
+                    <tr>
+                        <!-- columnas -->
+                        <td>Miércoles</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <!-- fila 4 -->
+                    <tr>
+                        <!-- columnas -->
+                        <td>Viernes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        
+        
+        </main>
+        
+        <footer>
+            <img src="imagenes/logo-blanco.png" alt="Logo de la Barbería Alura">
+            <p class="copyright">&copy Copyright Barber Alura - 2020</p>
+        </footer>
+    </body>
+</html>
